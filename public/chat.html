@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Chat | Chat Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="shortcut icon" type="image/png" href="./img/image.svg"/>
+    <link rel="stylesheet" href="./css/chat.css">
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <nav class="heading">
+            <h1><img src="./img/image.svg" alt=""><strong>Let's Chat</strong></h1>
+            <p>Room Name: <span id="roomname">Tor Babar Ki?</span></p>
+        </nav>
+
+        <div class="main-content">
+
+            <div class="sidebar">
+                <h4><i class="fas fa-users"></i> Users</h4>
+                <ul class="users">
+                    <!-- <li><i class="fas fa-angle-right"></i> Rajdeep</li>
+                    <li><i class="fas fa-angle-right"></i> arindam</li>
+                    <li><i class="fas fa-angle-right"></i> souvik naskar</li> -->
+                </ul>
+            </div>
+
+            <div class="msg-container">
+
+    
+            </div>
+
+        </div>
+
+
+        <div class="msg-input">
+            <input id="msg" type="text" placeholder="Write Message..." autocomplete="off" required>
+            <span><button id="button" type="submit"><i class="fas fa-paper-plane"></i>Send</button></span>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.5/qs.min.js" integrity="sha512-JduLFfiB5t9F2dYayaCCWObe/SeciiMhX2MHAKGvQ22crUA/Sb1l4elG5A7r7Bu1tP2rs1cU5lR1Irx/govVdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    transition: 0.2s all ease-in-out;
+    height: 100vh;
+    width: 100vw;
+    background: hsl(250, 72%, 55%);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --box-shadow: 0.2rem 0.2rem hsl(260, 9%, 93%);
+    --text-shadow: 0.2rem 0.2rem 0 hsl(40, 59%, 46%);
+    --border: 0.5rem solid hsl(49, 85%, 52%);
+    --input-border: 0.2rem solid hsl(49, 85%, 52%);
+}
+
+.container {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .heading {
+    font-size: 2.3rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    text-shadow: var(--text-shadow);
+    border-bottom: 2px solid hsl(49, 85%, 52%);
+}
+
+.container .heading h1 img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background: hsl(49, 85%, 52%);
+    margin: 0 0.7rem 0;
+    border: 3.5px solid hsl(0, 0%, 100%);
+}
+
+.container .heading h1:hover{
+    color: hsl(52, 99%, 60%);
+    text-shadow: none;
+}
+
+.container .heading p{
+    font-size: 1.3rem;
+    text-shadow: none;
+}
+
+.container .heading p span{
+    color: hsl(48, 100%, 50%);
+}
+
+/* ----sidebar Css ----- */
+
+.container .main-content{
+    display: flex;
+    justify-content: center;
+}
+
+.container .main-content .sidebar{
+    color: #fff;
+    width: 20%;
+    border: 5px solid hsl(49, 85%, 52%);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    width: 5%;
+    min-width: 200px;
+    height: 60vh;
+    box-shadow: var(--box-shadow);
+    overflow-y: auto;
+}
+
+.container .main-content .sidebar h4{
+    color: hsl(49, 85%, 52%);
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.container .main-content .sidebar ul{
+    list-style: none;
+}
+
+.container .main-content .sidebar ul li{
+    padding-bottom: 0.8rem;
+    text-transform: capitalize;
+}
+
+/* ---- Message section css ---- */
+
+.container .msg-container {
+    border: 0.3rem solid hsl(49, 85%, 52%);
+    border-radius: 0.8rem;
+    margin: 2rem 0 2rem 2rem;
+    padding: 1rem;
+    width: 60%;
+    min-width: 300px;
+    height: 60vh;
+    background: rgb(245, 245, 245);
+    overflow-y: auto;
+    
+}
+
+.container .msg-container .message {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    overflow-wrap: break-word;
+}
+
+.container .msg-container .left {
+    float: left;
+    clear: both;
+    background: hsl(188, 79%, 82%);
+    margin-right: 5rem;
+}
+
+.container .msg-container .right {
+    float: right;
+    clear: both;
+    background: hsl(299, 78%, 82%);
+    margin-left: 5rem;
+}
+
+.container .msg-container .left {
+    border: 2px solid rgb(0, 123, 255);
+    border-bottom-left-radius: 0;
+}
+
+.container .msg-container .right {
+    border: 2px solid rgb(220, 64, 255);
+    border-bottom-right-radius: 0;
+}
+
+.container .msg-container .middle{
+    float: right;
+    clear: both;
+    background: hsl(49, 100%, 74%);
+    margin-right: 5rem;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 450;
+    border: 2px solid hsl(52, 100%, 50%);
+}
+
+
+.container .msg-input input {
+    padding: 0.8rem;
+    margin: 1rem;
+    outline: none;
+    border: 5px solid hsl(49, 85%, 52%);
+    border-radius: 0.5rem;
+    width: 30rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+}
+
+.container .msg-input span button {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    border: 5px solid hsl(49, 85%, 52%);
+    font-weight: bold;
+    background: hsl(49, 85%, 52%);
+    color: hsl(250, 72%, 55%);
+    font-size: 1.2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.container .msg-input span button:hover{
+    color: hsl(0, 0%, 100%);
+    background: hsl(250, 72%, 55%);
+    border: 5px solid hsl(49, 85%, 52%);
+    box-shadow: none;
+    transition: 0.2s ease-in;
+    cursor:  pointer;
+}
+
+/* hsl(250, 72%, 55%) */
+
+.container .msg-input span button i {
+    margin-right: 0.3rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 20px;
+    padding: 0.2rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 76%);
+    border-radius: 20px;
+    padding: 0.2rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: hsl(250, 72%, 55%);;
+    border-radius: 20px;
+    padding: 0.2rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(250, 72%, 45%);
+}

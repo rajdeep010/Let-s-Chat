@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname + '/public')));
 const bot = "Chat Bot";
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/public/index.html'));
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 app.get('/chat', (req, res) => {

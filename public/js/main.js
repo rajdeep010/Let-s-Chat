@@ -4,6 +4,8 @@ let room = document.getElementById("roomname");
 let msgContainer = document.querySelector('.msg-container');
 let userList = document.querySelector('.users');
 
+input.focus();
+
 const {username, roomname} = Qs.parse(location.search, {
     ignoreQueryPrefix: true,
 });
@@ -41,15 +43,19 @@ button.addEventListener('click', (e) => {
     }
 })
 
-button.addEventListener('keyup', (e) => {
-    e.preventDefault();
+document.addEventListener('keyup', (e) => {
 
-    let msg = input.value;
-    
-    if(msg != ''){
-        socket.emit('chatMessage', msg);
-        input. value = '';
-        input.focus();
+    if(e.key == 'Enter')
+    {
+        e.preventDefault();
+
+        let msg = input.value;
+        
+        if(msg != ''){
+            socket.emit('chatMessage', msg);
+            input. value = '';
+            input.focus();
+        }
     }
 })
 

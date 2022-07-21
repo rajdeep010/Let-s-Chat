@@ -41,6 +41,18 @@ button.addEventListener('click', (e) => {
     }
 })
 
+button.addEventListener('keyup', (e) => {
+    e.preventDefault();
+
+    let msg = input.value;
+    
+    if(msg != ''){
+        socket.emit('chatMessage', msg);
+        input. value = '';
+        input.focus();
+    }
+})
+
 function addOthersMessage(data) {
     let child = document.createElement('div');
     // console.log(data);

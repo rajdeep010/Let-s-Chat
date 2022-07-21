@@ -22,7 +22,7 @@ app.get('/chat', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-    console.log('New Web Socket Connection Created');
+    // console.log('New Web Socket Connection Created');
 
     // new user joining
     socket.on('new-user-join', (newUser) => {

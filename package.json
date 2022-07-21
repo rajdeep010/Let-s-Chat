@@ -4,7 +4,7 @@
   "description": "my first chat application",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "rajdeep",
   "license": "ISC",

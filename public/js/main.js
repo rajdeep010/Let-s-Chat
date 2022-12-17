@@ -30,7 +30,6 @@ socket.on('roomUpdate', data => {
     updateUsersName(data);
 })
 
-
 button.addEventListener('click', (e) => {
     e.preventDefault();
 

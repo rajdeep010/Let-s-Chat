@@ -33,10 +33,10 @@ io.on('connection', (socket) => {
         // emit a welcome msg
         socket.emit('message', formatMessage(bot, '00', "Welcome to Let's Chat"));
 
-        // TODO: broadcast in that room that user joined
+        // broadcast in that room that user joined
         socket.broadcast.to(user.room).emit('message', formatMessage(bot, '00', `${user.name} has joined the room`));
 
-        // TOD0: Update the room informations
+        // Update the room informations
         io.to(user.room).emit('roomUpdate', roomInfo(user.room));
     })
 
@@ -57,7 +57,6 @@ io.on('connection', (socket) => {
             io.to(user.room).emit('roomUpdate', roomInfo(user.room));        }
     })
 })
-
 
 server.listen(port, () => {
     console.log(`Server is running on port ${port}`);
